@@ -1,32 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 18:18:42 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/22 16:51:01 by joduarte         ###   ########.fr       */
+/*   Created: 2025/10/22 18:47:59 by joduarte          #+#    #+#             */
+/*   Updated: 2025/10/22 19:41:12 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	**ft_split(char const *s, char c)
 {
-	unsigned char	*temp;
-	size_t			i;
-
-	i = 0;
-	if (count == 0 || size == 0)
-		return (malloc(1));
-	temp = malloc(sizeof(count * size));
-	if (!temp)
-		return (NULL);
-	while (i < count * size)
-	{
-		temp[i] = 0;
-		i++;
-	}
-	return (temp);
 }

@@ -1,47 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 17:28:36 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/22 13:39:42 by joduarte         ###   ########.fr       */
+/*   Created: 2025/10/22 15:37:13 by joduarte          #+#    #+#             */
+/*   Updated: 2025/10/22 16:00:47 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
-	int	sign;
-	int	result;
+	size_t	i;
 
 	i = 0;
-	sign = 1;
-	result = 0;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+	while (s[i])
 		i++;
-	if (nptr[i] == '+' && nptr[i + 1] != '-')
-		i++;
-	if (nptr[i] == '-')
+	return (i);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	j = 0;
+	str = malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!str)
+		return (NULL);
+	while (s1[i])
 	{
-		sign = -1;
+		str[i] = s1[i];
 		i++;
 	}
-	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
+	while (s2[j])
 	{
-		result = (result * 10) + nptr[i] - '0';
-		i++;
+		str[i + j] = s2[j];
+		j++;
 	}
-	return (result * sign);
+	str[i + j] = '\0';
+	return (str);
 }
 
 /* #include <stdio.h>
 
 int	main(void)
 {
-	const char *c = "++12345";
-	printf("%d\n", ft_atoi(c));
+	char	*s1 = "";
+	char	*s2 = "teste";
+
+	printf("%s\n", ft_strjoin(s1, s2));
 } */

@@ -1,47 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 17:28:36 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/22 13:39:42 by joduarte         ###   ########.fr       */
+/*   Created: 2025/10/22 13:49:56 by joduarte          #+#    #+#             */
+/*   Updated: 2025/10/22 15:33:23 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
-	int	sign;
-	int	result;
+	size_t	i;
 
 	i = 0;
-	sign = 1;
-	result = 0;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+	while (s[i])
 		i++;
-	if (nptr[i] == '+' && nptr[i + 1] != '-')
-		i++;
-	if (nptr[i] == '-')
+	return (i);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	char	*sub;
+
+	i = 0;
+	if (start > ft_strlen(s))
+		return (NULL);
+	sub = malloc(sizeof(char) * (len + 1));
+	if (!sub)
+		return (NULL);
+	while (s[start + i] && i < len)
 	{
-		sign = -1;
+		sub[i] = s[start + i];
 		i++;
 	}
-	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result = (result * 10) + nptr[i] - '0';
-		i++;
-	}
-	return (result * sign);
+	sub[i] = '\0';
+	return (sub);
 }
 
 /* #include <stdio.h>
 
 int	main(void)
 {
-	const char *c = "++12345";
-	printf("%d\n", ft_atoi(c));
+	char *s = "";
+	int i = 5;
+	int j = 12;
+
+	printf("%s\n", ft_substr(s, i, j));
 } */
