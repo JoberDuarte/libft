@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:09:16 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/22 18:48:38 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/23 10:13:05 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	*ft_memset(void *dest, int c, size_t count);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
+char	*ft_itoa(int n);
 char	*ft_strdup(const char *s1);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);

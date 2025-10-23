@@ -42,6 +42,6 @@ int	ft_atoi(const char *nptr)
 
 int	main(void)
 {
-	const char *c = "++12345";
+	const char *c = "+12345";
 	printf("%d\n", ft_atoi(c));
 } */
