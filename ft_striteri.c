@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 13:49:56 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 18:10:45 by joduarte         ###   ########.fr       */
+/*   Created: 2025/10/24 12:09:49 by joduarte          #+#    #+#             */
+/*   Updated: 2025/10/24 14:16:18 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
-	char	*sub;
+	unsigned int	i;
 
 	i = 0;
-	sub = malloc(sizeof(char) * (len + 1));
-	if (!sub)
-		return (NULL);
-	while (s[start + i] && i < len)
+	while (s[i])
 	{
-		sub[i] = s[start + i];
+		f(i, &s[i]);
 		i++;
 	}
-	sub[i] = '\0';
-	return (sub);
 }
 
-/* #include <stdio.h>
+/* char	ft_toupperchar(unsigned int index, char c)
+{
+	(void)index;
+	return ((char)ft_toupper(c));
+}
+
+#include <stdio.h>
 
 int	main(void)
 {
-	char *s = "";
-	int i = 5;
-	int j = 12;
+	char *s = "abcdef";
+	ft_striteri(s, ft_toupperchar);
 
-	printf("%s\n", ft_substr(s, i, j));
+	printf("%s\n", s);
 } */

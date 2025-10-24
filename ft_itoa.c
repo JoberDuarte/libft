@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 10:06:24 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/23 11:46:19 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:19:12 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char	*ft_itoa(int n)
 	}
 	if (num == 0)
 		str[0] = '0';
+	str[len] = '\0';
 	while (num > 0)
 	{
 		len--;
@@ -65,8 +66,15 @@ char	*ft_itoa(int n)
 
 int	main(void)
 {
-	int	i;
+	int		i;
+	char	*s;
 
-	i = 123450;
-	printf("%s\n", ft_itoa(i));
+	i = -10;
+	s = ft_itoa(i);
+	printf("%s\n", s);
+	for (i = 0; i < 5; i++)
+	{
+		printf("%02x", s[i]);
+	}
+	free(s);
 } */

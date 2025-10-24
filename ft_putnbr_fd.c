@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 13:49:56 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 18:10:45 by joduarte         ###   ########.fr       */
+/*   Created: 2025/10/24 14:39:22 by joduarte          #+#    #+#             */
+/*   Updated: 2025/10/24 17:01:17 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	char	*sub;
+	long	num;
+	char	c;
 
-	i = 0;
-	sub = malloc(sizeof(char) * (len + 1));
-	if (!sub)
-		return (NULL);
-	while (s[start + i] && i < len)
+	num = n;
+	if (num < 0)
 	{
-		sub[i] = s[start + i];
-		i++;
+		write(fd, "-", 1);
+		num = -num;
 	}
-	sub[i] = '\0';
-	return (sub);
+	if (num > 9)
+		ft_putnbr_fd(num / 10, fd);
+	num = (num % 10);
+	c = num + '0';
+	write(fd, &c, 1);
 }
 
 /* #include <stdio.h>
 
 int	main(void)
 {
-	char *s = "";
-	int i = 5;
-	int j = 12;
+	long	i;
 
-	printf("%s\n", ft_substr(s, i, j));
-} */
+	i = 2147483647;
+	ft_putnbr_fd(i, 1);
+}
+ */

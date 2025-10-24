@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:16:06 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/23 10:03:24 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/24 13:20:42 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	**ft_split(char const *s, char c)
 		else
 			i++;
 	}
-	split[j] = '\0';
+	split[j] = NULL;
 	return (split);
 }
 /* #include <stdio.h>
