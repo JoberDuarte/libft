@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:58:52 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 21:29:58 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/25 18:28:58 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t			i;
 
 	i = 0;
+	if(!dest && !src)
+		return (NULL);
 	temp_dest = (unsigned char *)dest;
 	temp_src = (unsigned char *)src;
 	if (temp_dest > temp_src)
 	{
-		while (n > 0)
-		{
-			n--;
+		while (n--)
 			temp_dest[n] = temp_src[n];
-		}
 	}
 	else
 	{
@@ -39,6 +38,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
 /* #include <stdio.h>
 int main ()
 {

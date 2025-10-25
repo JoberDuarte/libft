@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:53:09 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/21 15:20:57 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/25 19:19:27 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	temp_s = (unsigned char *)s;
 	temp_c = (unsigned char)c;
 	i = 0;
-	while (temp_s[i] && i < n)
+	while (i < n)
 	{
 		if (temp_s[i] == temp_c)
 			return ((void *)&temp_s[i]);
@@ -33,6 +33,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /* #include <stdio.h>
 int	main(void)
 {
-	char * c = ft_memchr("caio", 'i', 4);
+	char *c = ft_memchr("/|\x12\xff\x09\0\x42\042\0\42|\\", '\0', 12);
+	char *s = memchr("/|\x12\xff\x09\0\x42\042\0\42|\\", '\0', 12);
 	printf("%s\n", c);
+	printf("%s\n", s);
 }  */

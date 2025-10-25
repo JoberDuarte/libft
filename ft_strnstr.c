@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:04:24 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/22 12:34:55 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/25 19:55:44 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!little)
+	if (little[0] == '\0')
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
@@ -32,3 +32,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+/* #include <stdio.h>
+int main (void)
+{
+	char *s1 = "oh no not the empty string !";
+ 	char *s2 = "";
+ 	size_t max = 0;
+ 	char *i2 = ft_strnstr(s1, s2, max);
+	printf("%s\n", i2);
+
+} */
