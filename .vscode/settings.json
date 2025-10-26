@@ -8,5 +8,6 @@
         "editor.inlineSuggest.edits.showCollapsed": true,
         "github.copilot.enable": {
                 "*": false
-        }
+        },
+        "editor.detectIndentation": true
 }

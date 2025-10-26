@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 13:35:51 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/21 13:56:40 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:43:55 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,24 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 
 	i = 0;
-	while (s[i])
+	while (1)
 	{
-		if (s[i] == c)
-			return ((char *) &s[i]);
+		if ((unsigned char)s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		if (s[i] == '\0')
+			break ;
 		i++;
 	}
-	if (s[i] == c)
-		return ((char *) &s[i]);
 	return (NULL);
 }
+
+/* #include <stdio.h>
+int main (void)
+{
+	char *src = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+		char *d1 = strchr(src, '\0');
+		char *d2 = ft_strchr(src, '\0');
+
+	printf("%s\n", d1);
+	printf("%s\n", d2);
+} */

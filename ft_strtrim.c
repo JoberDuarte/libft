@@ -45,7 +45,7 @@ static int	ft_countright(char const *s1, char const *set)
 	int	j;
 	int	found;
 
-	i = ft_strlen(s1) -1;
+	i = ft_strlen(s1) - 1;
 	while (i > 0)
 	{
 		found = 0;
@@ -60,7 +60,7 @@ static int	ft_countright(char const *s1, char const *set)
 			j++;
 		}
 		if (found == 0)
-			return (i +1);
+			return (i + 1);
 		i--;
 	}
 	return (0);
@@ -79,7 +79,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = malloc(sizeof(char) * (end - start + 1));
 	if (!str)
 		return (NULL);
-	while ((start +i) < end)
+	while ((start + i) < end)
 	{
 		str[i] = s1[start + i];
 		i++;

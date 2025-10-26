@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:00:13 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/22 13:10:53 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:11:10 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,26 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 	char	*result;
 
-	i = 0;
+	i = ft_strlen(s);
 	result = NULL;
-	while (s[i])
+	while (1)
 	{
-		if (s[i] == c)
-			result = ((char *) &s[i]);
-		i++;
+		if ((unsigned char)s[i] == (unsigned char)c)
+		{
+			result = ((char *)&s[i]);
+			return (result);
+		}
+		if (i == 0)
+			break ;
+		i--;
 	}
-	if (s[i] == c)
-		return ((char *) &s[i]);
 	return (result);
 }
+
+/* #include <stdio.h>
+int main (void)
+{
+	char	*s = "teste";
+	int	c = 357;
+	printf("%s\n", ft_strrchr(s, c));
+} */
