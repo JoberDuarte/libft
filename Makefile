@@ -6,18 +6,17 @@
 #    By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 11:14:28 by joduarte          #+#    #+#              #
-#    Updated: 2025/10/24 19:47:48 by joduarte         ###   ########.fr        #
+#    Updated: 2025/10/27 16:35:21 by joduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-
 CFLAGS = -Wall -Wextra -Werror -g
 AR = ar rcs
 
-SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c \
 	ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c \
 	ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c \
@@ -27,18 +26,31 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c
 
 
-OBJS = $(SRCS:.c=.o)
+SRC_OBJS = $(SRC:.c=.o)
+
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c\
+	ft_lstlast.c ft_lastadd_back.c ft_lstdelone.c\
+	ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
+
+BONUS_OBJS = $(BONUS:.c=.o)
+	
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@$(AR) $(NAME) $(OBJS)
+$(NAME): $(SRC_OBJS)
+	@$(AR) $(NAME) $(SRC_OBJS)
 	@echo "\033[32mLibrary Created: $(NAME)\033[0m"
+	
 %.o: %.c
 	@$(CC) $(CFLAGS) -I . -c $< -o $@
 	
+#bonus:	$(SRC_OBJS) $(BONUS_OBJS)
+#	@$(AR) $(NAME) $(BONUS_OBJS)
+#	@echo "\033[32mBonus files added to: $(NAME)\033[0m"
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(SRC_OBJS) $(BONUS_OBJS)
+	@echo "\033[32mCleaning...\033[0m"
 
 fclean: clean
 	@rm -f $(NAME)
