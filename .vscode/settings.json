@@ -9,5 +9,6 @@
         "github.copilot.enable": {
                 "*": false
         },
-        "editor.detectIndentation": true
+        "editor.detectIndentation": true,
+        "editor.insertSpaces": false
 }

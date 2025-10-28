@@ -6,7 +6,7 @@
 #    By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 11:14:28 by joduarte          #+#    #+#              #
-#    Updated: 2025/10/27 16:35:21 by joduarte         ###   ########.fr        #
+#    Updated: 2025/10/28 14:21:25 by joduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 SRC_OBJS = $(SRC:.c=.o)
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c\
-	ft_lstlast.c ft_lastadd_back.c ft_lstdelone.c\
+	ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c\
 	ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 
@@ -45,9 +45,9 @@ $(NAME): $(SRC_OBJS)
 %.o: %.c
 	@$(CC) $(CFLAGS) -I . -c $< -o $@
 	
-#bonus:	$(SRC_OBJS) $(BONUS_OBJS)
-#	@$(AR) $(NAME) $(BONUS_OBJS)
-#	@echo "\033[32mBonus files added to: $(NAME)\033[0m"
+bonus:	$(SRC_OBJS) $(BONUS_OBJS)
+	@$(AR) $(NAME) $(BONUS_OBJS)
+	@echo "\033[32mBonus files added to: $(NAME)\033[0m"
 clean:
 	@rm -f $(SRC_OBJS) $(BONUS_OBJS)
 	@echo "\033[32mCleaning...\033[0m"

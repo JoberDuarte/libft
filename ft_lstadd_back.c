@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 20:14:35 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/28 11:46:51 by joduarte         ###   ########.fr       */
+/*   Created: 2025/10/28 12:07:48 by joduarte          #+#    #+#             */
+/*   Updated: 2025/10/28 14:24:28 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!lst || !new)
+	t_list	*temp;
+
+	temp = *lst;
+	if (!temp)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	if (temp == 0)
+		return ;
+	while (temp->next)
+		temp = temp->next;
+	temp->next = new;
+	new->next = NULL;
 }
