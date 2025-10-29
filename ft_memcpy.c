@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:13:37 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 17:19:11 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/29 19:54:33 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 int main(void)
 {
-	char	s[] = "Ola mundo";
-	char	s1[] = "Ola mundo";
+	char	s[] = "ABCDE";
+	char	s1[] = "ABCDE";
 
-	char *ss = memcpy(&s[2], s, 4);
-	char *ss1 = ft_memcpy(&s1[2], s1, 4);
+	char *ss = memcpy(&s[2], s, 2);
+	char *ss1 = ft_memcpy(&s1[2], s1, 2);
 	printf("%s\n",ss);
 	printf("%s\n", ss1);
 	

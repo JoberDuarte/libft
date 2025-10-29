@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:52:52 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/28 13:56:19 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:33:15 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 	t_list	*next;
 
+	temp = NULL;
 	if (!lst || !del)
-		temp = *lst;
+		return ;
+	temp = *lst;
 	while (temp)
 	{
 		next = temp->next;

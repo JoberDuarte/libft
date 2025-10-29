@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:09:16 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/28 14:20:25 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:06:25 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ typedef struct s_list
 
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstnew(void *content);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
