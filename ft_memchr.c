@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:53:09 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/25 19:19:27 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 12:07:43 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /* #include <stdio.h>
 int	main(void)
 {
-	char *c = ft_memchr("/|\x12\xff\x09\0\x42\042\0\42|\\", '\0', 12);
-	char *s = memchr("/|\x12\xff\x09\0\x42\042\0\42|\\", '\0', 12);
+	char *c = ft_memchr("Hello world", 'w', 12);
+	char *s = memchr("Hello world", 'w', 12);
 	printf("%s\n", c);
 	printf("%s\n", s);
 }  */

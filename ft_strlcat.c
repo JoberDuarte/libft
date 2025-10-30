@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:22:27 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 21:28:28 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:48:59 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,12 @@ int	main(void)
 	char dest[20] = "abcdef";
 	char src[] = "123456";
 
-	printf("%zu\n", ft_strlcat(dest, src, 5));
+	char dest1[20] = "abcdef";
+	char src1[] = "123456";
+
+	printf("%zu\n", ft_strlcat(dest, src, 11));
+	printf("%zu\n", strlcat(dest1, src1, 11));
 	printf("%s\n", dest);
+	printf("%s\n", dest1);
 
 } */

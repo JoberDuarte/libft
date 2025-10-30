@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:35:17 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/29 19:24:19 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 14:12:58 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 void	*ft_memset(void *dest, int c, size_t count)
 {
+	size_t			i;
 	unsigned char	*temp;
 
+	i = 0;
 	temp = (unsigned char *) dest;
-	while (count > 0)
+	while (i < count)
 	{
-		*temp = (unsigned char) c;
-		temp++;
-		count--;
+		temp[i] = (unsigned char) c;
+		i++;
 	}
 	return (dest);
 }

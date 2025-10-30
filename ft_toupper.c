@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:48:27 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/29 19:17:44 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:00:11 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,21 @@ int	ft_toupper(int c)
 int main ()
 {
 	char s[] = "hello world";
-	size_t l = strlen(s);
+	char s1[] = "hello world";
+	size_t l = ft_strlen(s);
 	size_t i = 0;
 	while(i < l)
 	{
 		s[i] = ft_toupper(s[i]);
-
+		i++;
 	}
 	printf("%s\n", s);
-	free(s);
+	i = 0;
+	while(i < l)
+	{
+		s1[i] = toupper(s1[i]);
+		i++;
+	}
+	printf("%s\n", s);
+	return 0;
 } */

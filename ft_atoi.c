@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:28:36 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/22 13:39:42 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 12:29:38 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ int	main(void)
 {
 	const char *c = "+12345";
 	printf("%d\n", ft_atoi(c));
+	return 0;
 } */

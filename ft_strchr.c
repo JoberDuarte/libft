@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 13:35:51 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/26 09:43:55 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:34:09 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ char	*ft_strchr(const char *s, int c)
 /* #include <stdio.h>
 int main (void)
 {
-	char *src = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-		char *d1 = strchr(src, '\0');
-		char *d2 = ft_strchr(src, '\0');
+	char *src = "teste";
+		char *d1 = strchr(src,25701);
+		char *d2 = ft_strchr(src, 25701);
 
 	printf("%s\n", d1);
 	printf("%s\n", d2);

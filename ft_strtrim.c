@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:05:45 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/25 18:03:53 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:10:23 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = ft_countleft(s1, set);
 	end = ft_countright(s1, set);
-	str = malloc(sizeof(char) * (end - start + 1));
+	str = ft_calloc((end - start + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	while ((start + i) < end)

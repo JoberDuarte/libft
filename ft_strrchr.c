@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:00:13 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/26 09:11:10 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:39:07 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ char	*ft_strrchr(const char *s, int c)
 /* #include <stdio.h>
 int main (void)
 {
-	char	*s = "teste";
+	char	*s = "teste 123456";
 	int	c = 357;
+	char	*s1 = "teste 123456";
+	int	c1 = 357;
 	printf("%s\n", ft_strrchr(s, c));
+	printf("%s\n", strrchr(s1, c1));
 } */

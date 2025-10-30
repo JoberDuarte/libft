@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:18:42 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/29 19:22:50 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 12:48:07 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,16 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (temp);
 }
+/* #include<stdio.h>
+
+int main(void)
+{
+	char	*str = "Hello World";
+	char *s = ft_calloc(strlen(str) + 1, sizeof(char));
+	if(!s)
+		return (1);
+	strcpy(s, str);
+	printf("%s\n", s);
+	free(s);
+	return (0);
+} */

@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:30:07 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/28 13:30:07 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 14:07:05 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
+			del(new_content);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}

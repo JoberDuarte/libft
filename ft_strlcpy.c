@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 15:44:16 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 18:15:32 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:38:53 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 /* #include <stdio.h>
 int main(void)
 {
-    char dest[30] = "rrrrrr";
+    char dest[30] = "123";
+    char dest1[30] = "123";
+    
 
-    printf("Retorno: %zu\n", ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
+    printf("Retorno: %zu\n", ft_strlcpy(dest, "lorem ipsum dolor sit amet", 1));
+    printf("Retorno: %zu\n", strlcpy(dest1, "lorem ipsum dolor sit amet", 1));
     printf("Conteúdo de dest: %s\n", dest);
+    printf("Conteúdo de dest: %s\n", dest1);
 
     return (0);
 } */

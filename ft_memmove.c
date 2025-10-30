@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:58:52 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/29 19:46:01 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:56:31 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 /* #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	char	s[] = "Ola mundo";
-	char	s1[] = "Ola mundo";
+	char	s[] = "ABCDE";
+	char	s1[] = "ABCDE";
 
-	char *ss = memmove(&s[2], s, 4);
-	char *ss1 = ft_memmove(&s1[2], s1, 4);
+	char *ss = memmove(&s[2], s, 3);
+	char *ss1 = ft_memmove(&s1[2], s1, 3);
 	printf("%s\n",ss);
 	printf("%s\n", ss1);
-	
+
 } */

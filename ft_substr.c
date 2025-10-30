@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 13:49:56 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/26 08:34:45 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:13:07 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int	main(void)
 {
-	char *s = "";
-	int i = 5;
-	int j = 12;
+	char *s = "Hello World";
+	int start = 5;
+	int end = 12;
 
-	printf("%s\n", ft_substr(s, i, j));
+	printf("%s\n", ft_substr(s, start, end));
 } */

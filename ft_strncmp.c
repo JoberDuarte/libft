@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:36:36 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/29 15:02:13 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:55:03 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int	main(void)
 {
-	printf("%i\n", strncmp("ABC", "AB", 3));
-	printf("%i\n", ft_strncmp("ABC", "AB", 3));
-}
- */
+	printf("%i\n", strncmp("ABC", "ABD", 3));
+	printf("%i\n", ft_strncmp("ABC", "ABD", 3));
+} */

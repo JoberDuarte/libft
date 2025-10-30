@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 08:16:06 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 13:20:42 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/10/30 14:13:28 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,34 @@ static char	*ft_word_split(char const *s, char c)
 	return (word);
 }
 
+static void	ft_free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	if (!split)
+		return ;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
+
+static void	ft_start_var(int *i, int *j)
+{
+	*i = 0;
+	*j = 0;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
 	char	**split;
 
-	i = 0;
-	j = 0;
+	ft_start_var(&i, &j);
 	split = ft_calloc((ft_count_words(s, c) + 1), sizeof(char *));
 	if (!split)
 		return (NULL);
@@ -69,15 +89,18 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			split[j] = ft_word_split(&s[i], c);
-			j++;
+			split[j++] = ft_word_split(&s[i], c);
+			if (!split[j - 1])
+			{
+				ft_free_split(split);
+				return (NULL);
+			}
 			while (s[i] && s[i] != c)
 				i++;
 		}
 		else
 			i++;
 	}
-	split[j] = NULL;
 	return (split);
 }
 /* #include <stdio.h>
