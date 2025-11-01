@@ -6,14 +6,14 @@
 #    By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 11:14:28 by joduarte          #+#    #+#              #
-#    Updated: 2025/10/28 14:21:25 by joduarte         ###   ########.fr        #
+#    Updated: 2025/11/01 10:52:22 by joduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \

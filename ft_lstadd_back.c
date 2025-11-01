@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:07:48 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/29 16:51:57 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/01 13:02:26 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,35 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	temp->next = new;
 	new->next = NULL;
 }
+
+/* #include <stdio.h>
+int main (void)
+{
+	t_list *head = ft_lstnew("A");
+
+	t_list *b = ft_lstnew("B");
+	ft_lstadd_back(&head, b);
+	
+	t_list *c = ft_lstnew("C");
+	ft_lstadd_back(&head, c);
+
+	t_list *d = ft_lstnew("D");
+	ft_lstadd_back(&head, d);
+
+	t_list *temp = head;
+	while (temp != NULL)
+	{
+		printf("%s ", (char *)temp->content);
+		temp = temp->next;
+	}
+	temp = head;
+	t_list *next;
+	while(temp != NULL)
+	{
+		next = temp->next;
+		free(temp);
+		temp = next;
+	}
+	return (0);
+	
+} */
