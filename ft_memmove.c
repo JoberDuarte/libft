@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:58:52 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/30 11:56:31 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:37:21 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t			i;
 
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
+	if (dest == src || n == 0)
+		return (dest);
 	temp_dest = (unsigned char *)dest;
 	temp_src = (unsigned char *)src;
 	if (temp_dest > temp_src)

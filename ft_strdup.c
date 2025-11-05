@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:25:40 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/30 12:52:50 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:24:49 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,11 @@ char	*ft_strdup(const char *s1)
 
 int main (void)
 {
-	char	*str = "Hello World";
+	char	*str = "NULL";
 	char	 *s = ft_strdup(str);
-
 	printf("%s\n", s);
+
+	char	*str1 = NULL;
+	char	 *s1 = strdup(str1);
+	printf("%s\n", s1);
 } */

@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:07:48 by joduarte          #+#    #+#             */
-/*   Updated: 2025/11/01 13:02:26 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 14:12:01 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	if (*lst == 0)
+	if (!*lst)
 	{
 		*lst = new;
 		return ;

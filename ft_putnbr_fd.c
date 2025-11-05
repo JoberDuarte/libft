@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:39:22 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/28 12:20:46 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:15:47 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_putnbr_fd(int n, int fd)
 	char	c;
 
 	num = n;
+	if (fd < 0)
+		return ;
 	if (num < 0)
 	{
 		write(fd, "-", 1);

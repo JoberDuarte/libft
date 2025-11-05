@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:09:16 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/29 17:06:25 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 13:51:00 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <strings.h>
 # include <unistd.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

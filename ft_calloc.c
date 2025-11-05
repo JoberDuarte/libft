@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:18:42 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/30 12:48:07 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:15:24 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			i;
 
 	i = 0;
-	if (count == 0 || size == 0)
-		return (malloc(0));
+	if (size != 0 && count > SIZE_MAX / size)
+		return (NULL);
 	temp = malloc(count * size);
 	if (!temp)
 		return (NULL);

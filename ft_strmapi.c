@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:41:52 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/24 14:15:47 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:03:41 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	str = ft_calloc((ft_strlen(s) + 1), sizeof(char));
 	if (!str)
 		return (NULL);

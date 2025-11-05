@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:05:45 by joduarte          #+#    #+#             */
-/*   Updated: 2025/10/30 13:10:23 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:12:56 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	start = ft_countleft(s1, set);
 	end = ft_countright(s1, set);
 	str = ft_calloc((end - start + 1), sizeof(char));
