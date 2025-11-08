@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:13:37 by joduarte          #+#    #+#             */
-/*   Updated: 2025/11/05 16:26:00 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/06 19:46:09 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t				i;
 
 	i = 0;
-	if (src == NULL && dest == NULL)
-		return (dest);
 	temp_dest = (unsigned char *)dest;
 	temp_src = (const unsigned char *)src;
 	while (i < n)

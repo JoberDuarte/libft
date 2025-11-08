@@ -6,7 +6,7 @@
 /*   By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:09:16 by joduarte          #+#    #+#             */
-/*   Updated: 2025/11/06 11:33:01 by joduarte         ###   ########.fr       */
+/*   Updated: 2025/11/06 16:11:41 by joduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void				*ft_calloc(size_t count, size_t size);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-void				ft_lstadd_front(t_list **lst, t_list *new);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memset(void *dest, int c, size_t count);
 void				ft_lstclear(t_list **lst, void (*del)(void *));

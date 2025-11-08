@@ -6,7 +6,7 @@
 #    By: joduarte <joduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 11:14:28 by joduarte          #+#    #+#              #
-#    Updated: 2025/11/05 17:53:45 by joduarte         ###   ########.fr        #
+#    Updated: 2025/11/05 14:37:53 by joduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ $(NAME): $(SRC_OBJS)
 	@echo "\033[32mLibrary Created: $(NAME)\033[0m"
 	
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 	
 bonus:	$(SRC_OBJS) $(BONUS_OBJS)
 	@$(AR) $(NAME) $(BONUS_OBJS)
